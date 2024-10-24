@@ -13,7 +13,16 @@ export default function Layout() {
           drawerInactiveTintColor: '#727d9b',
           drawerActiveTintColor: '#ffff',
           drawerHideStatusBarOnOpen: true,
+          overlayColor: 'transparent',
           drawerStyle: {
+            backgroundColor: '#1d1f25',
+            paddingTop: 32,
+            width: '50%',
+          },
+          drawerLabelStyle: {
+            marginLeft: -24,
+          },
+          sceneContainerStyle: {
             backgroundColor: '#1d1f25',
           },
         }}

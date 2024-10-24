@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { DrawerToggleButton } from '@react-navigation/drawer';
 import React from 'react';
+import DrawerScene from '../components/drawer-scene-wrapper';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,20 +36,22 @@ const styles = StyleSheet.create({
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Image
-          source={{ uri: 'https://github.com/pedroHenc.png' }}
-          style={styles.img}
-        />
+    <DrawerScene>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Image
+            source={{ uri: 'https://github.com/pedroHenc.png' }}
+            style={styles.img}
+          />
 
-        <View style={styles.user}>
-          <Text style={styles.hi}> Olá</Text>
-          <Text style={styles.userName}> 000</Text>
+          <View style={styles.user}>
+            <Text style={styles.hi}> Olá</Text>
+            <Text style={styles.userName}> 000</Text>
+          </View>
+
+          <DrawerToggleButton />
         </View>
-
-        <DrawerToggleButton />
       </View>
-    </View>
+    </DrawerScene>
   );
 }

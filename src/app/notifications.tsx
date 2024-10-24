@@ -1,6 +1,7 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { DrawerToggleButton } from '@react-navigation/drawer';
 import React from 'react';
+import DrawerScene from '../components/drawer-scene-wrapper';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,12 +25,14 @@ const styles = StyleSheet.create({
 
 export default function Notifications() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.userName}> Notify</Text>
+    <DrawerScene>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.userName}> Notify</Text>
 
-        <DrawerToggleButton />
+          <DrawerToggleButton />
+        </View>
       </View>
-    </View>
+    </DrawerScene>
   );
 }
